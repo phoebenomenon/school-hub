@@ -15,7 +15,35 @@ export const SEED_EVENTS = [
   { id: "s11", title: "Spring Break (No School)", date: "2026-04-06T16:00:00Z", endDate: "2026-04-11T00:00:00Z", type: "break", source: "Week 28" },
 ];
 
-export const SEED_TODOS = [];
+export const SEED_TODOS = [
+  {
+    id: "t1",
+    title: "Lay out green outfit + jeans for St. Patrick's Day",
+    details: "St. Patrick's Day is Monday 3/17 — school is doing green + jeans day. Set it out Sunday night so there's no morning scramble.",
+    dueDate: "2026-03-16T17:00:00Z",
+    priority: "urgent",
+    done: false,
+    source: "Week 28",
+  },
+  {
+    id: "t2",
+    title: "Bring cereal box for cereal challenge",
+    details: "Pack a cereal box in Wilson's backpack before school.",
+    dueDate: "2026-03-17T17:00:00Z",
+    priority: "urgent",
+    done: false,
+    source: "Week 28",
+  },
+  {
+    id: "t3",
+    title: "Recitation rehearsal — 'Oh, the Places You'll Go'",
+    details: "Full run-through including intro ('My name is Wilson, the title is...') and closing thank-you. Focus on expression, volume, and gestures — the Dr. Seuss rhythm is meant to be fun!",
+    dueDate: "2026-03-12T17:00:00Z",
+    priority: "urgent",
+    done: false,
+    source: "Week 28",
+  },
+];
 
 export const SEED_WEEK = {
   weekNumber: 28,
