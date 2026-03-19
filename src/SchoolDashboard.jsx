@@ -133,6 +133,13 @@ export default function SchoolDashboard() {
     if (!iso) return "";
     return new Date(iso).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "America/Los_Angeles" });
   };
+  const fmtTime = (iso) => {
+    if (!iso) return null;
+    const d = new Date(iso);
+    const h = d.toLocaleString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" });
+    const mins = d.toLocaleString("en-US", { hour: "numeric", minute: "2-digit", hour12: false, timeZone: "America/Los_Angeles" });
+    return mins === "0:00" || mins === "00:00" ? null : h;
+  };
   const daysUntil = (iso) => {
     if (!iso) return "";
     const t2 = new Date(new Date(iso).getFullYear(), new Date(iso).getMonth(), new Date(iso).getDate());
@@ -192,7 +199,7 @@ export default function SchoolDashboard() {
             <span style={{ fontSize: 10, fontWeight: 600, color: tc.color, background: tc.bg, padding: "1px 6px", borderRadius: 5 }}>{tc.label}</span>
           </div>
           <div style={{ fontSize: 12, color: "#777", marginTop: 2, display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <span>{fmtDate(ev.date)}{ev.endDate ? ` – ${fmtDate(ev.endDate)}` : ""}</span>
+            <span>{fmtDate(ev.date)}{ev.endDate ? ` – ${fmtDate(ev.endDate)}` : ""}{fmtTime(ev.date) ? <> · <strong style={{ color: "#555" }}>{fmtTime(ev.date)}</strong></> : ""}</span>
             <span style={{ fontWeight: 600, color: iT ? tc.color : iTm ? "#E67E22" : "#999" }}>{d}</span>
           </div>
           <div style={{ display: "flex", gap: 5, marginTop: 6, flexWrap: "wrap" }}>
