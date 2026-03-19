@@ -9,7 +9,7 @@ export const SEED_EVENTS = [
   { id: "s5", title: "St. Patrick's Day — Wear Green + Jeans", date: "2026-03-17T17:00:00Z", type: "event", source: "Week 28" },
   { id: "s6", title: "1G Science Fair Presentations (9am, Rm 150)", date: "2026-03-18T17:00:00Z", type: "event", source: "Week 28" },
   { id: "s7", title: "Grammar Test", date: "2026-03-19T17:00:00Z", type: "test", source: "Week 28" },
-  { id: "s8", title: "Elementary Movie Night", date: "2026-03-20T17:00:00Z", type: "event", source: "Week 28" },
+  { id: "s8", title: "Elementary Movie Night", date: "2026-03-20T23:30:00Z", type: "event", source: "Week 28" },
   { id: "s9", title: "Spring Egg Hunts", date: "2026-04-01T16:00:00Z", endDate: "2026-04-03T00:00:00Z", type: "event", source: "Week 28" },
   { id: "s10", title: "Early Release Day", date: "2026-04-03T16:00:00Z", type: "break", source: "Week 28" },
   { id: "s11", title: "Spring Break (No School)", date: "2026-04-06T16:00:00Z", endDate: "2026-04-11T00:00:00Z", type: "break", source: "Week 28" },
